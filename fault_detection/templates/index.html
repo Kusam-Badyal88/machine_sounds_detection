@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Machine Sounds Predictor</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      margin: 0;
+      padding: 0;
+      overflow: hidden; /* Prevents scrollbars from appearing */
+    }
+    .background-slider {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      overflow: hidden;
+    }
+    .background-slider img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+    }
+    .content-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+      padding: 20px;
+      text-align: center;
+      height: 100vh;
+      justify-content: center;
+    }
+    .headline {
+      font-size: 40px; /* Increased font size */
+      color: #000; /* Black color */
+      margin-bottom: 20px;
+      font-weight: bold;
+      background-color: rgba(173, 216, 230, 0.5); /* Light blue translucent background */
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+    .container {
+      max-width: 750px; /* Increased box width */
+      padding: 60px 50px; /* Increased padding */
+      background: rgba(245, 245, 220, 0.7); /* Beige translucent background */
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      text-align: left;
+      transform: translateX(10%); /* Move container slightly to the right */
+    }
+    h1 {
+      color: #000; /* Black color */
+      font-family: 'Times New Roman', serif;
+      margin-bottom: 20px;
+      font-size: 32px;
+      text-align: center; 
+    }
+    .quote {
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #666;
+      margin-bottom: 30px;
+    }
+    .btn {
+      background-color: #b0e0e6; /* Powder Blue */
+      color: #000;
+      border: none;
+      padding: 15px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      font-family: Georgia, serif;
+      transition: background-color 0.3s;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+    .btn:hover {
+      background-color: #5f9ea0; /* Darker Powder Blue on hover */
+    }
+    #file-upload {
+      display: none;
+    }
+    select {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size: 18px;
+      border-radius: 10px;
+      border: none; /* Removed border */
+      background-color: #b0e0e6; /* Powder Blue */
+      color: #000;
+      cursor: pointer;
+      font-family: Georgia, serif; /* Same font as other buttons */
+      text-align: center; /* Centered text */
+    }
+    .audio-btn {
+      background-color: #b0e0e6; /* Powder Blue */
+      color: #000;
+      border: none;
+      padding: 15px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      font-family: Georgia, serif;
+      transition: background-color 0.3s;
+      display: none;
+      margin-top: 10px;
+      width: 100%;
+      text-align: center;
+    }
+    .audio-btn:hover {
+      background-color: #5f9ea0; /* Darker Powder Blue on hover */
+    }
+  </style>
+</head>
+<body>
+  <div class="background-slider">
+    <img src="https://media.assettype.com/english-sentinelassam/import/h-upload/2021/12/10/280292-logo1.webp?w=1200&h=675&auto=format%2Ccompress&fit=max&enlarge=true" alt="Background Image">
+  </div>
+  <div class="content-wrapper">
+    <div class="headline">
+        Welcome to SoundSculpt : Mastering the Art of Lathe and VMC Machine Sound Analysis
+    </div>
+    <div class="container">
+      <h1>PREDICTOR</h1>
+      <div class="quote">
+        <p>"Understanding machine sounds is like discovering their secrets."</p>
+      </div>
+      <form id="upload-form" action="/predict" method="post" enctype="multipart/form-data">
+        <label for="file-upload" id="file-label"></label>
+        <input type="file" id="file-upload" name="audio" accept=".wav" style="display:none">
+        <button class="btn" type="button" onclick="document.getElementById('file-upload').click();">Upload Audio File</button>
+        <button id="play-audio-btn" class="audio-btn" type="button" onclick="document.getElementById('audio-player').play();">Play Audio</button>
+        <select name="algorithm">
+          <option value="" disabled selected>Choose Model</option>
+          <option value="svm">SVM</option>
+          <option value="random_forest">Random Forest</option>
+          <option value="decision_tree">Decision Tree</option>
+          <option value="naive_bayes">Naive Bayes</option>
+        </select>
+        <button class="btn" type="submit">Predict</button>
+        <button class="btn" type="reset" onclick="resetForm()">Reset</button>
+      </form>
+      <audio id="audio-player" controls style="display:none; width: 100%; margin-top: 10px;"></audio>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('file-upload').addEventListener('change', function() {
+      var file = this.files[0];
+      var filename = file.name;
+      document.querySelector('button[onclick="document.getElementById(\'file-upload\').click();"]').innerText = filename;
+
+      var audioPlayer = document.getElementById('audio-player');
+      var playAudioBtn = document.getElementById('play-audio-btn');
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        audioPlayer.src = e.target.result;
+        playAudioBtn.style.display = 'block';
+        audioPlayer.style.display = 'block';
+      };
+      reader.readAsDataURL(file);
+    });
+
+    function resetForm() {
+      document.getElementById('upload-form').reset();
+      document.querySelector('button[onclick="document.getElementById(\'file-upload\').click();"]').innerText = 'Upload Audio File';
+      document.getElementById('audio-player').style.display = 'none';
+      document.getElementById('audio-player').src = '';
+      document.getElementById('play-audio-btn').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

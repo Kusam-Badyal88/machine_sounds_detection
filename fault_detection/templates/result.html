@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prediction Result</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+    }
+    .container {
+      max-width: 600px;
+      padding: 40px 30px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    h1 {
+      color: #00bcd4; /* Ocean color */
+      font-family: 'Times New Roman', serif;
+      margin-bottom: 20px;
+      font-size: 32px;
+    }
+    .btn {
+      background-color: #8FBC8F; /* Sage color */
+      color: #fff;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 18px;
+      font-family: Georgia, serif;
+      transition: background-color 0.3s;
+      margin-top: 20px;
+      display: block;
+      width: 100%;
+    }
+    .btn:hover {
+      background-color: #6B8E23; /* Darker sage color on hover */
+    }
+    .result-box {
+      background-color: #f9fbe7;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 30px;
+    }
+    .prediction, .accuracy {
+      font-size: 20px;
+      color: #333;
+      font-family: Georgia, serif;
+      margin-bottom: 20px;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const prediction = "{{ prediction }}".toLowerCase();
+        const backgroundImages = {
+            "lm_def": "url('https://media.istockphoto.com/id/177007701/photo/laser-cutting-of-metal-sheet-with-sparks.jpg?s=612x612&w=0&k=20&c=oYWr7odGnFBClfVgtV442EL-rGLwaIVW1p2nJSsLji8=')",
+            "lm_non-def": "url('https://media.istockphoto.com/id/159758724/photo/high-speed-drill.jpg?s=612x612&w=0&k=20&c=9OIVRJP6cJZ8F1A34PnM2fFhUq27qHj5z1Nz3SWdHvM=')",
+            "vmc_def": "url('https://media.istockphoto.com/id/656542110/photo/old-industrial-lathe-detail.jpg?s=612x612&w=0&k=20&c=3eXBJ-0n4XK5oYYJLiehVuh90g_vnQmRgvA5jhUdc38=')",
+            "vmc_non-def": "url('https://media.istockphoto.com/id/492966251/photo/vintage-mechanical-arithmometer.jpg?s=612x612&w=0&k=20&c=_oSZmU1uy_Ma1s2g2hYzHlKBhzLrhGUpzao8gcURqlQ=')"
+        };
+
+        // Get the background image URL based on the prediction
+        const backgroundImage = backgroundImages[prediction] || "url('https://media.istockphoto.com/id/154368811/photo/cnc-milling-at-work.jpg?s=612x612&w=0&k=20&c=xCnOLXeG77dPEXuz_SaqGv3IC57Wffdx2yxuSCc2O8s=')";
+
+        // Apply the background image to the body
+        document.body.style.backgroundImage = backgroundImage;
+    });
+</script>
+
+</head>
+<body>
+  <div class="container">
+    <h1>Prediction Result</h1>
+    <div class="result-box"><p><strong>
+         Model Chosen:</strong> {{ model_name }}</p>
+        <p class="prediction">The machine sound is classified as: {{ prediction }}</p>
+      <div class="accuracy">
+        <p>Model Accuracy: {{ accuracy }}%</p>
+      </div>
+    </div>
+    <button class="btn" onclick="location.href='/'">Go to Home Page</button>
+  </div>
+</body>
+</html>
