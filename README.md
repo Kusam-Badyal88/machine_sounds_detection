@@ -66,8 +66,27 @@ python app.py
 ➡️ Open your browser and visit:
 http://127.0.0.1:5000
 
-🖼️ Demo Screenshots
-Homepage UI	Model Selection Page	Prediction Output
+## 📸 Screenshots
+
+### 🏠 Homepage UI  
+User lands on the homepage and uploads a machine sound `.wav` file.
+
+![Homepage](https://github.com/Kusam-Badyal88/machine_sounds_detection/blob/master/static/screenshots/homepage.png?raw=true)
+
+---
+
+### ⚙️ Model Selection  
+User selects one of the Machine Learning models (SVM, RF, DT, NB) for prediction.
+
+![Model Selection](https://github.com/Kusam-Badyal88/machine_sounds_detection/blob/master/static/screenshots/model_selection.png?raw=true)
+
+---
+
+### 🎯 Prediction Output  
+System predicts whether the machine sound is **Defective** or **Non-Defective** and shows model accuracy.
+
+![Prediction](https://github.com/Kusam-Badyal88/machine_sounds_detection/blob/master/static/screenshots/prediction.png?raw=true)
+
 		
 
 📈 Model Accuracies
