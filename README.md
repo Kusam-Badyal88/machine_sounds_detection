@@ -5,7 +5,7 @@ This project helps identify early signs of machine faults through sound, support
 
 ---
 
-## 🌟 **Key Features**
+## 🌟 Key Features
 
 - 🛠️ **Real-time audio classification** of machine sounds  
 - 🤖 **Multiple ML Models** supported: SVM, Random Forest, Decision Tree, Naive Bayes  
@@ -16,19 +16,16 @@ This project helps identify early signs of machine faults through sound, support
 
 ---
 
-## 🔍 **How It Works**
+## 🔍 How It Works
 
-1. User uploads a `.wav` machine audio file  
-2. Features are extracted from the audio:
-   - **MFCC**
-   - **Chroma Frequencies**
-   - **Spectral Centroid**
-3. Selected ML model makes a prediction  
-4. Result and model accuracy are displayed on the webpage  
+1. 🎵 User uploads a `.wav` machine sound file  
+2. 🧪 Features extracted: MFCC, Chroma, Spectral Centroid  
+3. 🤖 Model (SVM, RF, DT, NB) predicts label  
+4. ✅ Result and model accuracy shown on screen  
 
 ---
 
-## 📂 **Labels Used for Classification**
+## 📂 Labels Used for Classification
 
 | Label Code | Description         |
 |------------|---------------------|
@@ -37,33 +34,40 @@ This project helps identify early signs of machine faults through sound, support
 | 2          | VMC_DEF ⚙️          |
 | 3          | VMC_NON-DEF 🟢       |
 
-> You can map them to:
+> You can group them as:  
 > - **Defective** → Label 0 & 2  
-> - **Non-Defective** → Label 1 & 3
+> - **Non-Defective** → Label 1 & 3  
 
 ---
 
-## 🛠️ **Tech Stack**
+## 🛠️ Tech Stack
 
-| Tool           | Usage                            |
-|----------------|----------------------------------|
-| Python 🐍       | Core programming language         |
-| Flask 🌐        | Web framework                    |
-| Librosa 🎵      | Audio signal processing           |
-| Scikit-learn 🤖 | ML algorithms and models          |
-| HTML/CSS 🖥️     | Web UI and styling                |
-| Pickle 🧃       | Saving/loading trained models      |
+| Tool            | Description                      |
+|------------------|----------------------------------|
+| Python 🐍         | Programming Language              |
+| Flask 🌐          | Web Framework                    |
+| Librosa 🎵        | Audio Feature Extraction         |
+| Scikit-learn 🤖   | ML Model Training and Prediction |
+| HTML/CSS 🎨       | UI/UX Styling                    |
+| Pickle 🧃         | Save/Load Trained Models         |
 
 ---
 
-## 🚀 **Run This Project Locally**
+## 🚀 Run This Project Locally
 
 ```bash
+# Step 1: Clone the repository
 git clone https://github.com/Kusam-Badyal88/machine_sounds_detection.git
+
+# Step 2: Navigate to project directory
 cd machine_sounds_detection
+
+# Step 3: Install dependencies
 pip install -r requirements.txt
+
+# Step 4: Run the application
 python app.py
-➡️ Open your browser and visit:
+➡️ Open your browser and go to:
 http://127.0.0.1:5000
 
 ## 📸 Screenshots
@@ -71,7 +75,7 @@ http://127.0.0.1:5000
 ### 🏠 Homepage UI  
 User lands on the homepage and uploads a machine sound `.wav` file.
 
-![Homepage](https://github.com/Kusam-Badyal88/machine_sounds_detection/blob/master/static/screenshots/homepage.png)
+![Homepage](https://github.com/Kusam-Badyal88/machine_sounds_detection/blob/master/static/screenshots/homepage.png?raw=true)
 
 ---
 
@@ -87,7 +91,7 @@ System predicts whether the machine sound is **Defective** or **Non-Defective** 
 
 ![Prediction](https://github.com/Kusam-Badyal88/machine_sounds_detection/blob/master/static/screenshots/prediction.png?raw=true)
 
-		
+
 
 📈 Model Accuracies
 Model	Accuracy
@@ -99,17 +103,19 @@ Naive Bayes 🧠	57%
 ✨ Future Enhancements
 🎙️ Live microphone-based detection
 
-🤖 Deep Learning support (e.g., CNN, LSTM)
+🤖 Deep Learning integration (CNN, LSTM)
 
-📱 Mobile app integration
+📱 Mobile app support
 
-📊 Real-time dashboard for industrial monitoring
+📊 Real-time analytics dashboard
 
-🧠 Expand dataset for higher accuracy
+🔊 Larger and diverse dataset for training
 
-📦 Download Large Files (Google Drive Links)
-Due to GitHub’s file size limits, model files are available for manual download:
+📦 Download Large Files (Google Drive)
+Due to GitHub file size limits, download the following files manually:
 
-📥 Download svm_model.pkl
+📥 svm_model.pkl
 
-📥 Download machine_sounds_detection.ipynb
+📥 machine_sounds_detection.ipynb
+
+
