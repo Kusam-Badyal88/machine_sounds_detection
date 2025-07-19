@@ -1,4 +1,4 @@
-🎧 Machine Sound Detection System 🔍
+# 🎧 **Machine Sound Detection System** 🔍
 An intelligent audio classification web application that detects defective and non-defective machine sounds using machine learning.
 This project helps in early fault detection of machines using their sound signals, aiding in predictive maintenance for industrial applications.
 
