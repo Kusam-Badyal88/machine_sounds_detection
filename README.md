@@ -72,27 +72,28 @@ http://127.0.0.1:5000
 
 ## 📸 Screenshots
 
-### 🏠 Homepage UI
-📷 [Click to view full image](https://github.com/Kusam-Badyal88/machine_sounds_detection/blob/master/static/screenshots/homepage.png?raw=true)  
+### 🏠 Homepage UI  
+📷 [Click to view full image](https://raw.githubusercontent.com/Kusam-Badyal88/machine_sounds_detection/master/static/screenshots/homepage.png)  
 User lands on the homepage and uploads a machine sound `.wav` file.
 
-![Homepage Screenshot](https://github.com/Kusam-Badyal88/machine_sounds_detection/blob/master/static/screenshots/homepage.png?raw=true)
+![Homepage Screenshot](https://raw.githubusercontent.com/Kusam-Badyal88/machine_sounds_detection/master/static/screenshots/homepage.png)
 
 ---
 
-### ⚙️ Model Selection
-📷 [Click to view full image](https://github.com/Kusam-Badyal88/machine_sounds_detection/blob/master/static/screenshots/model_selection.png?raw=true)  
+### ⚙️ Model Selection  
+📷 [Click to view full image](https://raw.githubusercontent.com/Kusam-Badyal88/machine_sounds_detection/master/static/screenshots/model_selection.png)  
 User selects the ML model for prediction.
 
-![Model Selection Screenshot](https://github.com/Kusam-Badyal88/machine_sounds_detection/blob/master/static/screenshots/model_selection.png?raw=true)
+![Model Selection Screenshot](https://raw.githubusercontent.com/Kusam-Badyal88/machine_sounds_detection/master/static/screenshots/model_selection.png)
 
 ---
 
-### 🎯 Prediction Output
-📷 [Click to view full image](https://github.com/Kusam-Badyal88/machine_sounds_detection/blob/master/static/screenshots/prediction.png?raw=true)  
+### 🎯 Prediction Output  
+📷 [Click to view full image](https://raw.githubusercontent.com/Kusam-Badyal88/machine_sounds_detection/master/static/screenshots/prediction.png)  
 Model output with prediction label and accuracy.
 
-![Prediction Screenshot](https://github.com/Kusam-Badyal88/machine_sounds_detection/blob/master/static/screenshots/prediction.png?raw=true)
+![Prediction Screenshot](https://raw.githubusercontent.com/Kusam-Badyal88/machine_sounds_detection/master/static/screenshots/prediction.png)
+
 
 
 
