@@ -1,125 +1,102 @@
-# 🎧 **Machine Sound Detection System** 🔍
-An intelligent audio classification web application that detects defective and non-defective machine sounds using machine learning.
-This project helps in early fault detection of machines using their sound signals, aiding in predictive maintenance for industrial applications.
+# 🎧 Machine Sound Detection System 🔍
 
-It’s valuable for engineers, manufacturers, and technicians to monitor machine health and prevent breakdowns using audio diagnostics.
+An intelligent **audio classification web app** that detects defective and non-defective machine sounds using **Machine Learning**.  
+This project helps identify early signs of machine faults through sound, supporting predictive maintenance in industrial setups.
 
-🚀 Key Features
-🛠️ Real-Time Sound Analysis: Detects whether a machine is defective or non-defective.
+---
 
-🎙️ Audio Classification: Uses ML algorithms to classify uploaded machine sounds.
+## 🌟 **Key Features**
 
-🧠 Multi-Model Support: Includes SVM, Random Forest, Decision Tree, and Naive Bayes.
+- 🛠️ **Real-time audio classification** of machine sounds  
+- 🤖 **Multiple ML Models** supported: SVM, Random Forest, Decision Tree, Naive Bayes  
+- 📊 **Displays Prediction and Model Accuracy**  
+- 🌐 **User-Friendly Web Interface** using Flask  
+- 🎵 **Advanced Feature Extraction** with MFCC, Chroma, and Spectral Centroid  
+- 📁 **Upload Machine Audio** (.wav format) and get results instantly  
 
-📊 Accuracy Displayed: Each prediction includes the respective model's accuracy.
+---
 
-📁 Web Interface: Designed using Flask for a smooth user experience.
+## 🔍 **How It Works**
 
-🎵 Feature Extraction: Uses MFCC, Chroma, and Spectral Centroid with Librosa.
+1. User uploads a `.wav` machine audio file  
+2. Features are extracted from the audio:
+   - **MFCC**
+   - **Chroma Frequencies**
+   - **Spectral Centroid**
+3. Selected ML model makes a prediction  
+4. Result and model accuracy are displayed on the webpage  
 
-🧠 Machine Learning Pipeline
-Audio Input → .wav files
-Preprocessing → Silence removal, normalization
-Feature Extraction → MFCC, Chroma, Spectral Centroid
-Model Training → SVM, RF, DT, NB using scikit-learn
-Prediction → Flask interface provides instant classification
+---
 
-🖼️ Demo Screenshots
-Upload Audio Page	Prediction Page	Model Selection
-		
+## 📂 **Labels Used for Classification**
 
-🔍 How It Works
-🔊 User uploads a .wav audio file of machine noise.
+| Label Code | Description         |
+|------------|---------------------|
+| 0          | LM_DEF 🛠️           |
+| 1          | LM_NON-DEF ✅        |
+| 2          | VMC_DEF ⚙️          |
+| 3          | VMC_NON-DEF 🟢       |
 
-📈 The app extracts features like:
+> You can map them to:
+> - **Defective** → Label 0 & 2  
+> - **Non-Defective** → Label 1 & 3
 
-MFCC (Mel Frequency Cepstral Coefficients)
+---
 
-Chroma Frequencies
+## 🛠️ **Tech Stack**
 
-Spectral Centroid
+| Tool           | Usage                            |
+|----------------|----------------------------------|
+| Python 🐍       | Core programming language         |
+| Flask 🌐        | Web framework                    |
+| Librosa 🎵      | Audio signal processing           |
+| Scikit-learn 🤖 | ML algorithms and models          |
+| HTML/CSS 🖥️     | Web UI and styling                |
+| Pickle 🧃       | Saving/loading trained models      |
 
-🧠 The chosen ML model predicts whether the machine is Defective or Non-Defective.
+---
 
-✅ The prediction result is shown along with model accuracy.
+## 🚀 **Run This Project Locally**
 
-🧠 Model Predictions
-Label	Description
-0	LM_DEF
-1	LM_NON-DEF
-2	VMC_DEF
-3	VMC_NON-DEF
-
-You can map these internally for simpler outputs like "Defective" / "Non-Defective".
-
-🛠️ Tech Stack
-Tool / Library	Purpose
-Python 🐍	Core Programming
-Flask 🌐	Web Application Framework
-Librosa 🎵	Audio Feature Extraction
-NumPy 📈	Numerical Operations
-Scikit-learn 🤖	Machine Learning Models
-HTML/CSS	Frontend UI
-Pickle 🧪	Save & Load ML Models
-
-⚙️ How to Run the Project
-bash
-Copy
-Edit
-# Step 1: Clone the repo
+```bash
 git clone https://github.com/Kusam-Badyal88/machine_sounds_detection.git
-
-# Step 2: Navigate to folder
 cd machine_sounds_detection
-
-# Step 3: Install all dependencies
 pip install -r requirements.txt
-
-# Step 4: Start the Flask server
 python app.py
-
-# Go to browser
+➡️ Open your browser and visit:
 http://127.0.0.1:5000
 
-📦 Large File Downloads (Google Drive Links)
-Due to GitHub's 100MB file size limit, please download large files manually:
+🖼️ Screenshots
+🔹 Upload Page:
 
-🔹 machine_sounds_detection.ipynb
-🔹 svm_model.pkl
 
-📂 Project Structure
-bash
-Copy
-Edit
-machine_sounds_detection/
-├── static/
-│   └── screenshots/
-│       ├── homepage.png
-│       ├── prediction.png
-│       └── model_selection.png
-├── templates/
-│   ├── index.html
-│   └── result.html
-├── uploads/
-├── app.py
-├── svm_model.pkl
-├── rf_model.pkl
-├── dt_model.pkl
-├── nb_model.pkl
-├── machine_sounds_detection.ipynb
-└── README.md
-📈 Model Accuracies
+🔹 Prediction Result:
+
+
+🔹 Model Selection Page:
+
+
+📈 Model Accuracy
 Model	Accuracy
-SVM 📊	87%
 Random Forest 🌲	91%
+SVM 📊	87%
 Decision Tree 🌴	85%
 Naive Bayes 🧠	82%
 
-✨ Future Improvements
-📢 Add microphone-based live sound detection
+✨ Future Enhancements
+🎙️ Live microphone-based detection
 
-🧠 Integrate deep learning models (CNN, LSTM)
+🤖 Deep Learning support (e.g., CNN, LSTM)
 
-📱 Create Android/iOS mobile app
+📱 Mobile app integration
 
-🔁 Add real-time auto-refresh dashboard for live monitoring
+📊 Real-time dashboard for industrial monitoring
+
+🧠 Expand dataset for higher accuracy
+
+📦 Download Large Files (Google Drive Links)
+Due to GitHub’s file size limits, model files are available for manual download:
+
+📥 Download svm_model.pkl
+
+📥 Download machine_sounds_detection.ipynb
