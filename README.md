@@ -70,30 +70,33 @@ python app.py
 ➡️ Open your browser and go to:
 http://127.0.0.1:5000
 
+🧠 Machine Learning Pipeline
+Audio Input → .wav files
+Preprocessing → Silence removal, normalization
+Feature Extraction → MFCC, Chroma, Spectral Centroid
+Model Training → SVM, RF, DT, NB using scikit-learn
+Prediction → Flask interface for classification
+
 ## 📸 Screenshots
 
-### 🏠 Homepage UI  
-📷 [Click to view full image](https://raw.githubusercontent.com/Kusam-Badyal88/machine_sounds_detection/master/static/screenshots/homepage.png)  
+### 🏠 Homepage UI
 User lands on the homepage and uploads a machine sound `.wav` file.
 
-![Homepage Screenshot](https://raw.githubusercontent.com/Kusam-Badyal88/machine_sounds_detection/master/static/screenshots/homepage.png)
+![Homepage](https://github.com/Kusam-Badyal88/machine_sounds_detection/blob/master/static/screenshots/homepage.png?raw=true)
 
 ---
 
-### ⚙️ Model Selection  
-📷 [Click to view full image](https://raw.githubusercontent.com/Kusam-Badyal88/machine_sounds_detection/master/static/screenshots/model_selection.png)  
-User selects the ML model for prediction.
+### ⚙️ Model Selection
+User selects one of the Machine Learning models (SVM, RF, DT, NB) for prediction.
 
-![Model Selection Screenshot](https://raw.githubusercontent.com/Kusam-Badyal88/machine_sounds_detection/master/static/screenshots/model_selection.png)
+![Model Selection](https://github.com/Kusam-Badyal88/machine_sounds_detection/blob/master/static/screenshots/model_selection.png?raw=true)
 
 ---
 
-### 🎯 Prediction Output  
-📷 [Click to view full image](https://raw.githubusercontent.com/Kusam-Badyal88/machine_sounds_detection/master/static/screenshots/prediction.png)  
-Model output with prediction label and accuracy.
+### 🎯 Prediction Output
+System predicts whether the machine sound is **Defective** or **Non-Defective** and shows model accuracy.
 
-![Prediction Screenshot](https://raw.githubusercontent.com/Kusam-Badyal88/machine_sounds_detection/master/static/screenshots/prediction.png)
-
+![Prediction](https://github.com/Kusam-Badyal88/machine_sounds_detection/blob/master/static/screenshots/prediction.png?raw=true)
 
 
 
@@ -121,5 +124,6 @@ Due to GitHub file size limits, download the following files manually:
 📥 svm_model.pkl
 
 📥 machine_sounds_detection.ipynb
+
 
 
