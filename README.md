@@ -76,12 +76,12 @@ http://127.0.0.1:5000
 🔹 Model Selection Page:
 
 
-📈 Model Accuracy
+📈 Model  Accuracy
 Model	Accuracy
-Random Forest 🌲	94%
-SVM 📊	89%
+Random Forest 🌲 94%
+SVM 📊	 89%
 Decision Tree 🌴	80%
-Naive Bayes 🧠	57%
+Naive Bayes 🧠	 57%
 
 ✨ Future Enhancements
 🎙️ Live microphone-based detection
