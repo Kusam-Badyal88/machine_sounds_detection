@@ -66,20 +66,16 @@ python app.py
 ➡️ Open your browser and visit:
 http://127.0.0.1:5000
 
-## 🖼️ **Demo Screenshots**
+🖼️ Demo Screenshots
+Homepage UI	Model Selection Page	Prediction Output
+		
 
-| Homepage UI | Model Selection Page | Prediction Output |
-|-------------|----------------------|-------------------|
-| ![Homepage](https://github.com/Kusam-Badyal88/machine_sounds_detection/blob/master/static/screenshots/homepage.png) | ![Model Selection](https://github.com/Kusam-Badyal88/machine_sounds_detection/blob/master/model_selection/select_model.png?raw=true) | ![Prediction](https://github.com/Kusam-Badyal88/machine_sounds_detection/blob/master/prediction/output_result.png?raw=true) |
-
-
-
-📈 Model  Accuracy
+📈 Model Accuracies
 Model	Accuracy
-Random Forest 🌲 94%
-SVM 📊	 89%
+Random Forest 🌲	94%
+SVM 📊	89%
 Decision Tree 🌴	80%
-Naive Bayes 🧠	 57%
+Naive Bayes 🧠	57%
 
 ✨ Future Enhancements
 🎙️ Live microphone-based detection
