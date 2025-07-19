@@ -146,12 +146,13 @@ Naive Bayes 🧠	57%
 📊 Real-time analytics dashboard
 🔊 Train on larger and more diverse machine sound datasets
 
-📦 Download Large Files (Google Drive)
+## 📦 Download Large Files (Google Drive)
 Due to GitHub file size limits, download the following files manually:
 
-📥 svm_model.pkl
+📥 [svm_model.pkl](https://drive.google.com/file/d/1jQ_S-p9lCunQWEohSP_mx6RsiTtZntAl/view?usp=sharing)
 
-📥 machine_sounds_detection.ipynb
+📥 [machine_sounds_detection.ipynb](https://drive.google.com/file/d/1wrHQWYcFGFE2NylV6zYDDtrORSTavdIY/view?usp=sharing)
+
 
 
 
