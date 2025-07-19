@@ -71,7 +71,7 @@ http://127.0.0.1:5000
 ### 🏠 Homepage UI  
 User lands on the homepage and uploads a machine sound `.wav` file.
 
-![Homepage](https://github.com/Kusam-Badyal88/machine_sounds_detection/blob/master/static/screenshots/homepage.png?raw=true)
+![Homepage](https://github.com/Kusam-Badyal88/machine_sounds_detection/blob/master/static/screenshots/homepage.png)
 
 ---
 
