@@ -66,14 +66,12 @@ python app.py
 ➡️ Open your browser and visit:
 http://127.0.0.1:5000
 
-🖼️ Screenshots
-🔹 Upload Page:
+## 🖼️ **Demo Screenshots**
 
+| Homepage UI | Model Selection Page | Prediction Output |
+|-------------|----------------------|-------------------|
+| ![Homepage](https://github.com/Kusam-Badyal88/machine_sounds_detection/blob/master/static/screenshots/homepage.png) | ![Model Selection](https://github.com/Kusam-Badyal88/machine_sounds_detection/blob/master/model_selection/select_model.png?raw=true) | ![Prediction](https://github.com/Kusam-Badyal88/machine_sounds_detection/blob/master/prediction/output_result.png?raw=true) |
 
-🔹 Prediction Result:
-
-
-🔹 Model Selection Page:
 
 
 📈 Model  Accuracy
